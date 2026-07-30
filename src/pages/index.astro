@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProductCard from "../components/ProductCard.astro";
+import Link from "../components/Link.astro";
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -25,11 +26,8 @@ import "../styles/global.css";
         er enkel, og systemet kræver ingen daglig indsats. Resultatet er lavere forbrug, økonomiske besparelser og en grønnere virksomhedsprofil.
       </p>
     </div>
-    <div id="ecomanager-link" class="my-[20px] flex flex-row gap-[10px]">
-      <img src="../src/assets/images/link-arrow.svg" alt="" />
-      <a href="">
-        <p>Læs mere om Ecomanager</p>
-      </a>
+    <div>
+        <Link linktext="Læs om vores produkter"></Link>
     </div>
   </section>
   <section id="img-section">

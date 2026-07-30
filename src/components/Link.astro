@@ -1,0 +1,10 @@
+---
+const {linktext="", href="#"} = Astro.props;
+---
+    
+    <div id="ecomanager-link" class="my-[20px] flex flex-row gap-[10px] hover:ml-1">
+      <img src="../src/assets/images/link-arrow.svg" alt="" />
+      <a {href}>
+        <p class="font-bold italic uppercase">{linktext}</p>
+      </a>
+    </div>
