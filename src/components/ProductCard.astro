@@ -1,0 +1,21 @@
+---
+const url = "https://qdrttkiajrtrxugplhzw.supabase.co/rest/v1/products";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFkcnR0a2lhanJ0cnh1Z3BsaHp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQwMjQ0OTQsImV4cCI6MjA5OTYwMDQ5NH0.Vsecr0dasmulljJjSt2DJ03XU7peocEHuMfoSqxPf74";
+
+const options  = { headers: {apikey: key} };
+
+const data: any[] = await fetch(url, options).then((res) => res.json());
+---
+
+{
+    data.map((product) => (
+        <article>
+            <div class="flex flex-col place-items-center w-20 gap-[10px]">
+            <img class="w-[100%]" src={product.image} alt="img">
+                        <a href={"/products/" + product.slug} id="productname">
+            <p>{product.name}</p>
+            </a>
+            </div>
+        </article>
+    ))
+}

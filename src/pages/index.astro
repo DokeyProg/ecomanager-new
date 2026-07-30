@@ -1,11 +1,46 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import ProductCard from "../components/ProductCard.astro";
 import "../styles/global.css";
-
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+  <section id="hero" class="my-[20px]">
+    <div class="place-self-center mx-[25px]">
+      <img src="../src/assets/images/hero-ecoman.png" alt="hero-title" />
+    </div>
+    <div>
+      <img class="w-[100%]" src="../src/assets/images/hero-video.png" alt="" />
+    </div>
+  </section>
+  <section id="section" class="my-[20px] mx-[25px] flex flex-col gap">
+    <div id="kort-om" class="flex flex-col gap-[10px]">
+      <h1 class="font-black">Kort om EcoManager</h1>
+      <p>
+        ECOmanager er Zeppelin Rentals intelligente løsning til styring og optimering af byggepladsens energiforbrug. Systemet bruger AI til at analysere data og reducere CO₂‑udledning, samtidig med
+        at det måler og styrer indeklima, varme, vand og tilsluttede enheder som ladestandere. Du får fuldt overblik via en online portal og nem adgang til forbrugsdata til rapportering. Installation
+        er enkel, og systemet kræver ingen daglig indsats. Resultatet er lavere forbrug, økonomiske besparelser og en grønnere virksomhedsprofil.
+      </p>
+    </div>
+    <div id="ecomanager-link" class="my-[20px] flex flex-row gap-[10px]">
+      <img src="../src/assets/images/link-arrow.svg" alt="" />
+      <a href="">
+        <p>Læs mere om Ecomanager</p>
+      </a>
+    </div>
+  </section>
+  <section id="img-section">
+    <img class="w-[100%]" src="https://placehold.co/448x299" alt="" />
+  </section>
+  <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px]">
+    <div>
+      <h1 class="font-black italic text-xl uppercase">Produkter der kan styres</h1>
+    </div>
+    <div id="product" class="flex flex-wrap gap-10 place-content-center">
+      <ProductCard />
+    </div>
+  </section>
 </Layout>

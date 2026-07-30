@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+
+export async function getStaticPaths() {
+  // const response = await fetch('...');
+  // const data = await response.json();
+
+ const url = "https://qdrttkiajrtrxugplhzw.supabase.co/rest/v1/products";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFkcnR0a2lhanJ0cnh1Z3BsaHp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQwMjQ0OTQsImV4cCI6MjA5OTYwMDQ5NH0.Vsecr0dasmulljJjSt2DJ03XU7peocEHuMfoSqxPf74";
+
+  const options = { headers: { apikey: key } };
+
+  const data: any[] = await fetch(url, options).then((res) => res.json());
+
+  return data.map((product) => {
+    return {
+      params: { slug: product.slug },
+      props: { product },
+    };
+  });
+}
+
+//const { slug } = Astro.params;
+const { product } = Astro.props;
+
+---
+
+<Layout>
+    <article>
+            <a href={"/products/" + product.slug} class="productname">
+            <p>produktside for {product.name}</p>
+            </a>
+            <img src={product.image} alt="img">
+        </article>
+</Layout>
