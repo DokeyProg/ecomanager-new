@@ -1,17 +1,33 @@
-<div class="w-[100%] h-[40px] bg-linear-to-r from-[#931813] to-[#AF0000] place-items-center justify-between flex flex-row">
-  <div class="flex flex-row px-[20px] gap-2">
-    <a href="/">
+<div x-data="{ open: false }" class="w-[100%] h-[40px] bg-linear-to-r from-[#931813] to-[#AF0000]">
+  <!-- Navbar Header -->
+  <div class="flex justify-between place-items-center w-[100%] h-[40px] p-4 outline">
+    <div class="flex flex-row px-[20px] gap-2">
+        <a href="/">
     <img src="../src/assets/images/logo.png" alt="" />
     </a>
     <a href="/">
     <img src="../src/assets/images/ecomanager-logo.png" alt="" />
     </a>
+    </div>
+    
+    <!-- Burger Button -->
+    <button @click="open = !open" class="md:hidden focus:outline-none cursor-pointer">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#" class="text-white">Om Ecomanager</a>
+      <a href="#" class="text-white">Statistik og Data</a>
+    </nav>
   </div>
-<div data-svg-wrapper data-layer="Component 1" data-property-1="default" class="Component1">
-    <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="7" y1="11" x2="35" y2="11" stroke="white" stroke-width="2"></line>
-      <line x1="7" y1="19" x2="35" y2="19" stroke="white" stroke-width="2"></line>
-      <line x1="7" y1="27" x2="35" y2="27" stroke="white" stroke-width="2"></line>
-    </svg>
+
+  <!-- Mobile Menu -->
+  <div x-show="open" class="md:hidden relative w-[50%] flex flex-col place-self-end px-4 pt-2 pb-4 space-y-2 bg-linear-to-r from-[#931813] to-[#AF0000]">
+      <a href="#" class="text-white">Om Ecomanager</a>
+      <a href="#" class="text-white">Statistik og Data</a>
   </div>
 </div>

@@ -1,13 +1,16 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import ProductCard from "../../components/ProductCard.astro";
 import "../../styles/global.css";
+import Productpage from "../productpage.astro";
 
 export async function getStaticPaths() {
   // const response = await fetch('...');
   // const data = await response.json();
 
- const url = "https://qdrttkiajrtrxugplhzw.supabase.co/rest/v1/products";
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFkcnR0a2lhanJ0cnh1Z3BsaHp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQwMjQ0OTQsImV4cCI6MjA5OTYwMDQ5NH0.Vsecr0dasmulljJjSt2DJ03XU7peocEHuMfoSqxPf74";
+  const url = "https://qdrttkiajrtrxugplhzw.supabase.co/rest/v1/products";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFkcnR0a2lhanJ0cnh1Z3BsaHp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQwMjQ0OTQsImV4cCI6MjA5OTYwMDQ5NH0.Vsecr0dasmulljJjSt2DJ03XU7peocEHuMfoSqxPf74";
 
   const options = { headers: { apikey: key } };
 
@@ -23,14 +26,48 @@ const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZi
 
 //const { slug } = Astro.params;
 const { product } = Astro.props;
-
 ---
 
 <Layout>
-    <article>
-            <a href={"/products/" + product.slug} class="productname">
-            <p>produktside for {product.name}</p>
-            </a>
-            <img src={product.image} alt="img">
-        </article>
+  <article>
+    <div class="mx-[25px] my-[20px]">
+      <p class="font-black text-2xl uppercase italic">Produktside</p>
+    </div>
+    <section>
+      <div class="place-self-center mx-[25px]">
+        <img class="block md:hidden" src={product.productimgmobile} alt="productimage" />
+      </div>
+      <div class="my-[20px] mx-[25px] flex flex-col gap-5">
+        <div>
+          <p class="font-black italic text-xl">{product.name}</p>
+        </div>
+        <div>
+          <p class="font-bold">Produktbeskrivelse:</p>
+          <p>
+            Produktbeskrivelse: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar commodo nunc, vitae rutrum orci mollis nec. Praesent a porttitor metus. Sed id est et eros
+            sollicitudin venenatis. Duis ac nulla vel urna viverra interdum in id ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar commodo nunc, vitae rutrum orci mollis nec.
+            Praesent a porttitor metus. Sed id est et eros sollicitudin venenatis. Duis ac nulla vel urna viverra interdum in id ex.
+          </p>
+        </div>
+        <div>
+          <ul class="list-disc list-inside">
+            <li>Fordel 1</li>
+            <li>Fordel 2</li>
+            <li>Fordel 3</li>
+          </ul>
+        </div>
+        <div>
+          <!-- Button Here-->
+        </div>
+      </div>
+    </section>
+  <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px]">
+    <div>
+      <h1 class="font-black italic text-xl uppercase">Andre produkter der kan styres med EcoManager</h1>
+    </div>
+    <div id="product" class="flex flex-wrap gap-5 place-content-center">
+      <ProductCard />
+    </div>
+  </section>
+  </article>
 </Layout>
