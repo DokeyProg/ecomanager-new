@@ -14,7 +14,7 @@ const data: any[] = await fetch(url, options).then((res) => res.json());
             <a class="group relative flex flex-col place-items-center" href={"/products/" + product.slug}>
             <div class=" flex flex-col content-center w-[90px] h-[90px] gap-[10px]">
             <img class="" src="../src/assets/images/green-circle-bg.svg " alt="">
-            <img class="flex self-center absolute w-[90px] flex flex-col align-self-center" src={product.image} alt="img">
+            <img class="self-center absolute w-[90px] flex flex-col align-self-center" src={product.image} alt="img">
             </div>
             <div class="absolute -z-1 flex flex-col items-center w-[90px] h-[90px] gap-[10px] group-hover:bg-[#95C93F] rounded-[360px] blur-[0px] md:group-hover:animate-heartbeat md:group-hover:animate-duration-2000 md:group-hover:animate-iteration-count-infinite md:group-hover:animate-ease-linear">
             </div>
