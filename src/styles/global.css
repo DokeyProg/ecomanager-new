@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
-@plugin '@tailwindcss/typography';
-@plugin '@tailwindcss/forms';
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
 @import "tailwindcss-animated";
-@import 'tailwind-animations';
+@import "tailwind-animations";
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'Inter-BlackItalic';
-  src: url('/fonts/inter/Inter_24pt-BlackItalic.tff') format('truetype');
+  font-family: "Inter-BlackItalic";
+  src: url("/fonts/inter/Inter_18pt-BlackItalic.tff") format("truetype");
 }
 
 @font-face {
-  font-family: 'Inter-ExtraBoldItalic';
-  src: url('/fonts/inter/Inter_18pt-ExtraBoldItalic.tff') format('truetype');
+  font-family: "Inter-ExtraBoldItalic";
+  src: url("/fonts/inter/Inter_18pt-ExtraBoldItalic.tff") format("truetype");
 }
 
 @font-face {
-  font-family: 'Inter-Regular';
-  src: url('/fonts/inter/Inter_18pt-Regular.tff') format('truetype');
+  font-family: "Inter-Regular";
+  src: url("/fonts/inter/Inter_18pt-Regular.tff") format("truetype");
 }
 
 @font-face {
-  font-family: 'Inter-BoldItalic';
-  src: url('/fonts/inter/Inter_18pt-BoldItalic.tff') format('truetype');
+  font-family: "Inter-BoldItalic";
+  src: url("/fonts/inter/Inter_18pt-BoldItalic.tff") format("truetype");
 }
 
 @theme {
