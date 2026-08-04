@@ -12,14 +12,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/vite": "^4.3.3",
     "alpinejs": "^3.15.12",
-    "astro": "^7.1.4"
+    "astro": "^7.1.4",
+    "tailwind-animations": "^1.0.2",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
     "install": "^0.13.0",
-    "npm": "^10.9.9"
+    "npm": "^11.19.0"
   },
   "allowScripts": {
     "esbuild@0.28.1": true

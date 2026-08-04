@@ -29,31 +29,25 @@ const { product } = Astro.props;
 ---
 
 <Layout>
-  <article>
-    <div class="mx-[25px] my-[20px]">
-      <p class="font-black text-2xl uppercase italic">Produktside</p>
+  <article class="xl:flex xl:flex-col xl:gap-[40px]">
+    <div class="mx-[25px] my-[20px] xl:w-[1024px] xl:place-self-center">
+      <p class="h1">{product.name}</p>
     </div>
-    <section>
-      <div class="place-self-center mx-[25px]">
-        <img class="block md:hidden" src={product.productimgmobile} alt="productimage" />
+    <section class="xl:w-[1024px] xl:place-self-center xl:flex xl:flex-row xl:gap-[40px]">
+      <div class="place-self-start mx-[25px] xl:mx-0 xl:place-self-start">
+        <img class="block xl:hidden" src={product.productimgmobile} alt="productimage" />
+        <img class="hidden xl:block" src={product.productimgdesktop} alt="productimage" />
       </div>
-      <div class="my-[20px] mx-[25px] flex flex-col gap-5">
+      <div class="my-[20px] mx-[25px] xl:mx-0 xl:my-0 flex flex-col gap-5 xl:w-[750px] xl:place-self-end">
         <div>
-          <p class="font-black italic text-xl">{product.name}</p>
-        </div>
-        <div>
-          <p class="font-bold">Produktbeskrivelse:</p>
-          <p>
-            Produktbeskrivelse: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar commodo nunc, vitae rutrum orci mollis nec. Praesent a porttitor metus. Sed id est et eros
-            sollicitudin venenatis. Duis ac nulla vel urna viverra interdum in id ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar commodo nunc, vitae rutrum orci mollis nec.
-            Praesent a porttitor metus. Sed id est et eros sollicitudin venenatis. Duis ac nulla vel urna viverra interdum in id ex.
+          <p class="p2 whitespace-break-spaces">{product.desc}
           </p>
         </div>
         <div>
-          <ul class="list-disc list-inside">
-            <li>Fordel 1</li>
-            <li>Fordel 2</li>
-            <li>Fordel 3</li>
+          <ul class="list-disc list-outside mx-[25px] flex flex-col gap-2">
+            <li class="p1">{product.fordel1}</li>
+            <li class="p1">{product.fordel2}</li>
+            <li class="p1">{product.fordel3}</li>
           </ul>
         </div>
         <div>
@@ -61,11 +55,11 @@ const { product } = Astro.props;
         </div>
       </div>
     </section>
-  <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px]">
+    <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px] xl:w-[1024px] xl:place-self-center">
     <div>
-      <h1 class="font-black italic text-xl uppercase">Andre produkter der kan styres med EcoManager</h1>
+      <p class="s1">Andre produkter der kan styres med EcoManager</p>
     </div>
-    <div id="product" class="flex flex-wrap gap-5 place-content-center">
+    <div id="product" class="flex flex-wrap gap-5 place-content-center xl:justify-between">
       <ProductCard />
     </div>
   </section>

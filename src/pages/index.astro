@@ -16,27 +16,30 @@ import Link from "../components/Link.astro";
       <img class="w-[100%]" src="/images/hero-video.png" alt="" />
     </div>
   </section>
-  <section id="section" class="my-[20px] mx-[25px] flex flex-col gap">
-    <div id="kort-om" class="flex flex-col gap-[10px]">
-      <h1 class="font-black">Kort om EcoManager</h1>
-      <p>
+  <section class="mx-[25px] md:hidden">
+    <Link linktext="Læs Om vores produkter" href="#product-list"/>
+  </section>
+  <section id="section" class="my-[20px] mx-[25px] xl:w-[1024px] xl:place-self-center flex flex-col gap-2 md:flex-row xl:place-items-center xl:justify-between">
+    <div id="kort-om" class="flex flex-col gap-[10px] lg:w-[702px]">
+      <p class="s1">Kort om EcoManager</p>
+      <p class="p2">
         ECOmanager er Zeppelin Rentals intelligente løsning til styring og optimering af byggepladsens energiforbrug. Systemet bruger AI til at analysere data og reducere CO₂‑udledning, samtidig med
         at det måler og styrer indeklima, varme, vand og tilsluttede enheder som ladestandere. Du får fuldt overblik via en online portal og nem adgang til forbrugsdata til rapportering. Installation
         er enkel, og systemet kræver ingen daglig indsats. Resultatet er lavere forbrug, økonomiske besparelser og en grønnere virksomhedsprofil.
       </p>
     </div>
-    <div>
-        <Link linktext="Læs om vores produkter"></Link>
+    <div class="place-content-center">
+        <Link linktext="Læs mere om ecomanager" href="/about"></Link>
     </div>
   </section>
   <section id="img-section">
-    <img class="w-[100%]" src="https://placehold.co/448x299" alt="" />
+    <img class="w-[100%] xl:w-[1024px] xl:flex xl:place-self-center" src="https://placehold.co/448x299" alt="" />
   </section>
-  <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px]">
+  <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px] xl:w-[1024px] xl:place-self-center">
     <div>
-      <p class="h1">Produkter der kan styres med EcoManager</p>
+      <p class="s1">Produkter der kan styres med EcoManager</p>
     </div>
-    <div id="product" class="flex flex-wrap gap-5 place-content-center">
+    <div id="product" class="flex flex-wrap gap-5 place-content-center xl:justify-between">
       <ProductCard />
     </div>
   </section>

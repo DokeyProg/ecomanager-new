@@ -1,60 +1,64 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
 ---
 
 <Layout>
-  <section class="mx-[25px]">
+  <section class="mx-[25px] my-[25px] xl:w-[1024px] xl:place-self-center">
     <div>
-      <h1>Om Ecomanager</h1>
+      <p class="h1">Om Ecomanager</p>
     </div>
   </section>
-  <section class="mx-[25px] flex flex-col gap-5">
-    <div class="flex flex-col gap-5">
+  <section class="mx-[25px] flex flex-col gap-5 xl:w-[1024px] xl:place-self-center xl:flex xl:flex-row xl:my-[40px]">
+    <div class="flex flex-col gap-5 xl:w-[900px] xl:border-r xl:pr-5">
       <div>
-        <h1 class="font-bold">Hvad er EcoManager?</h1>
-        <p>
+        <h1 class="s1">Hvad er EcoManager?</h1>
+        <p class="p1">
           ECOmanager er Zeppelin Rentals’ intelligente løsning til styring af byggepladsens strøm og energikilder på både kontor- og mandskabsfaciliteter. Systemet bruger kunstig intelligens til at
           optimere forbruget og reducere CO₂‑udledning gennem løbende analyse af data.
         </p>
       </div>
       <div>
-        <h1 class="font-bold">Fordele ved ecomanager</h1>
-        <p>
+        <h1 class="s1">Fordele ved ecomanager</h1>
+        <p class="p1">
           Med ECOmanager får du let adgang til forbrugsdata og en online portal, der giver fuldt overblik over skurbyens energiforbrug døgnet rundt. Systemet er centralt styret, så besparelserne sker
           automatisk uden daglig indsats. Det er udviklet til at passe direkte i eksisterende skurvogne, hvilket gør installationen hurtig. Resultatet er enkel rapportering, optimal udnyttelse og
           mindre energispild.
         </p>
       </div>
       <div>
-        <h1 class="font-bold">Med ecomanager får du</h1>
-        <p>
+        <h1 class="s1">Med ecomanager får du</h1>
+        <p class="p1">
           Med ECOmanager reducerer du CO₂‑udledning og opnår mærkbare besparelser i skurvognens energiforbrug, samtidig med at virksomheden får en grønnere profil. Data til rapportering hentes med ét
           klik, og du får fuldt overblik over skurbyens forbrug uden mørketal. Systemet sikrer, at skurbyen udnyttes optimalt og driftssikkert. Du slipper for bekymringer – alt kører automatisk og
           transparent.
         </p>
       </div>
+        <div>
+      <Link linktext="Læs om vores statistikker 
+og data" />
     </div>
-    <div>link</div>
-    <div>
+    </div>
+    <div class="my-[25px] xl:pl-5 xl:flex xl:flex-col xl:gap-10 xl:my-0 xl:self-start">
       <div>
-        <h1 class="font-bold">Ecomanager:</h1>
+        <h1 class="s1">Ecomanager:</h1>
       </div>
-      <div class="flex flex-col gap-[50px]">
+      <div class="flex flex-col gap-[50px] xl:h-[925px] xl:justify-between">
         <div class="flex flex-row gap-[11px]">
-          <img src="/images/ecomanager-icons/download.svg" alt="">
-          <p>... gør det nemt at downloade forbrugsdata til brug ved rapportering</p>
+          <img class="xl:w-[90px] xl:h-[90px]" src="/images/ecomanager-icons/download.svg" alt="" />
+          <p class="p1">... gør det nemt at downloade forbrugsdata til brug ved rapportering</p>
         </div>
         <div class="flex flex-row gap-[11px]">
-          <img src="/images/ecomanager-icons/world.svg" alt="">
-          <p>... giver dig en online portal, der gør det let at monitorere skurbyens forbrug - døgnet rundt</p>
+          <img class="xl:w-[90px] xl:h-[90px]" src="/images/ecomanager-icons/world.svg" alt="" />
+          <p class="p1">... giver dig en online portal, der gør det let at monitorere skurbyens forbrug - døgnet rundt</p>
         </div>
         <div class="flex flex-row gap-[11px]">
-          <img src="/images/ecomanager-icons/control.svg" alt="">
-          <p>... er centralt styret så du ikke behøver at gøre noget for at opnå besparelserne</p>
+          <img class="xl:w-[90px] xl:h-[90px]" src="/images/ecomanager-icons/control.svg" alt="" />
+          <p class="p1">... er centralt styret så du ikke behøver at gøre noget for at opnå besparelserne</p>
         </div>
         <div class="flex flex-row gap-[11px]">
-          <img src="/images/ecomanager-icons/options.svg" alt="">
-          <p>... er særligt udviklet til at passe ind i de skurvogne, l allerede bruger, sa de installeres let og hurtigt.</p>
+          <img class="xl:w-[90px] xl:h-[90px]" src="/images/ecomanager-icons/options.svg" alt="" />
+          <p class="p1">... er særligt udviklet til at passe ind i de skurvogne, l allerede bruger, sa de installeres let og hurtigt.</p>
         </div>
       </div>
     </div>

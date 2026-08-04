@@ -2,28 +2,26 @@
 
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
-@import "tailwindcss-animated";
 @import "tailwind-animations";
-@import "tailwindcss-intersect";
 
 @font-face {
   font-family: "Inter-BlackItalic";
-  src: url("/fonts/inter/Inter_18pt-BlackItalic.tff") format("truetype");
+  src: url("/fonts/inter/Inter_18pt-BlackItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Inter-ExtraBoldItalic";
-  src: url("/fonts/inter/Inter_18pt-ExtraBoldItalic.tff") format("truetype");
+  src: url("/fonts/inter/Inter_18pt-ExtraBoldItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Inter-Regular";
-  src: url("/fonts/inter/Inter_18pt-Regular.tff") format("truetype");
+  src: url("/fonts/inter/Inter_18pt-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Inter-BoldItalic";
-  src: url("/fonts/inter/Inter_18pt-BoldItalic.tff") format("truetype");
+  src: url("/fonts/inter/Inter_18pt-BoldItalic.ttf") format("truetype");
 }
 
 @theme {
@@ -48,16 +46,22 @@
 }
 
 .h1 {
-  @apply font-header text-[30px];
+  @apply font-header uppercase text-[30px] xl:text-[48px];
 }
 .s1 {
-  @apply font-subheader text-[20px];
+  @apply font-subheader uppercase text-[20px] xl:text-[24px];
 }
 .p1 {
-  @apply font-body text-[15px];
+  @apply font-body normal-case text-[20px];
 }
-.l1 {
-  @apply font-link text-[15px];
+.p2 {
+  @apply font-body normal-case text-[15px] xl:text-[20px];
+}
+.p3 {
+  @apply font-body normal-case text-[10px];
+}
+.a1 {
+  @apply font-link uppercase text-[15px] xl:text-[20px];
 }
 
 
