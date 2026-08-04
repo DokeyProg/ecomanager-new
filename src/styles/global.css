@@ -7,18 +7,23 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+  font-family: 'Inter-BlackItalic';
+  src: url('/fonts/inter/Inter_24pt-BlackItalic.tff') format('truetype');
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Inter-ExtraBoldItalic';
+  src: url('/fonts/inter/Inter_18pt-ExtraBoldItalic.tff') format('truetype');
 }
 
 @font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
+  font-family: 'Inter-Regular';
+  src: url('/fonts/inter/Inter_18pt-Regular.tff') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-BoldItalic';
+  src: url('/fonts/inter/Inter_18pt-BoldItalic.tff') format('truetype');
 }
 
 @theme {
@@ -33,10 +38,28 @@
   --color-secondary-600: #F57A00;
 
   /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  --font-header: "Inter-ExtraBoldItalic";
+  --font-subheader: "Inter-BlackItalic";
+  --font-button: "Inter-Regular";
+  --font-body: "Inter-Regular";
+  --font-link: "Inter-BoldItalic"
+
+  
 }
+
+.h1 {
+  @apply font-header text-[30px];
+}
+.s1 {
+  @apply font-subheader text-[20px];
+}
+.p1 {
+  @apply font-body text-[15px];
+}
+.l1 {
+  @apply font-link text-[15px];
+}
+
 
 @layer base {
 
