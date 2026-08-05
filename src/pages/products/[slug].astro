@@ -29,7 +29,7 @@ const { product } = Astro.props;
 ---
 
 <Layout>
-  <article class="lg:flex lg:flex-col lg:gap-[40px]">
+  <article class="lg:flex lg:flex-col flex flex-col gap-[40px] lg:gap-[100px]">
     <div class="mx-[25px] my-[20px] lg:w-[1024px] lg:place-self-center">
       <p class="h1">{product.name}</p>
     </div>
@@ -38,8 +38,8 @@ const { product } = Astro.props;
         <img class="block lg:hidden" src={product.productimgmobile} alt="productimage" />
         <img class="hidden lg:block" src={product.productimgdesktop} alt="productimage" />
       </div>
-      <div class="my-[20px] mx-[25px] lg:mx-0 lg:my-0 flex flex-col gap-5 lg:w-[750px] lg:place-self-end">
-        <div>
+      <div class="my-[20px] mx-[25px] lg:mx-0 lg:my-0 flex flex-col gap-[40px] lg:w-[750px] lg:place-self-end">
+        <div class="pb-10">
           <p class="p2 whitespace-break-spaces">{product.desc}
           </p>
         </div>
