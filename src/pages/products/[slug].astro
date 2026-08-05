@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import ProductCard from "../../components/ProductCard.astro";
 import "../../styles/global.css";
-import Productpage from "../productpage.astro";
+import Button from "../../components/Button.astro";
 
 export async function getStaticPaths() {
   // const response = await fetch('...');
@@ -29,16 +29,16 @@ const { product } = Astro.props;
 ---
 
 <Layout>
-  <article class="xl:flex xl:flex-col xl:gap-[40px]">
-    <div class="mx-[25px] my-[20px] xl:w-[1024px] xl:place-self-center">
+  <article class="lg:flex lg:flex-col lg:gap-[40px]">
+    <div class="mx-[25px] my-[20px] lg:w-[1024px] lg:place-self-center">
       <p class="h1">{product.name}</p>
     </div>
-    <section class="xl:w-[1024px] xl:place-self-center xl:flex xl:flex-row xl:gap-[40px]">
-      <div class="place-self-start mx-[25px] xl:mx-0 xl:place-self-start">
-        <img class="block xl:hidden" src={product.productimgmobile} alt="productimage" />
-        <img class="hidden xl:block" src={product.productimgdesktop} alt="productimage" />
+    <section class="lg:w-[1024px] lg:place-self-center lg:flex lg:flex-row lg:gap-[40px]">
+      <div class="place-self-start mx-[25px] lg:mx-0 lg:place-self-start">
+        <img class="block lg:hidden" src={product.productimgmobile} alt="productimage" />
+        <img class="hidden lg:block" src={product.productimgdesktop} alt="productimage" />
       </div>
-      <div class="my-[20px] mx-[25px] xl:mx-0 xl:my-0 flex flex-col gap-5 xl:w-[750px] xl:place-self-end">
+      <div class="my-[20px] mx-[25px] lg:mx-0 lg:my-0 flex flex-col gap-5 lg:w-[750px] lg:place-self-end">
         <div>
           <p class="p2 whitespace-break-spaces">{product.desc}
           </p>
@@ -51,15 +51,15 @@ const { product } = Astro.props;
           </ul>
         </div>
         <div>
-          <!-- Button Here-->
+          <Button buttontext="Få Tilbud Nu"></Button>
         </div>
       </div>
     </section>
-    <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px] xl:w-[1024px] xl:place-self-center">
+    <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px] lg:w-[1024px] lg:place-self-center">
     <div>
       <p class="s1">Andre produkter der kan styres med EcoManager</p>
     </div>
-    <div id="product" class="flex flex-wrap gap-5 place-content-center xl:justify-between">
+    <div id="product" class="flex flex-wrap gap-5 place-content-center lg:justify-between">
       <ProductCard />
     </div>
   </section>

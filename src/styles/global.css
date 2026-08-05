@@ -28,21 +28,30 @@
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
-  --color-primary-400: #00E4F5;
+  --color-primary-400: #00e4f5;
   --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
+  --color-primary-600: #006d75;
+  --color-secondary-400: #f5e400;
+  --color-secondary-500: #f5a600;
+  --color-secondary-600: #f57a00;
 
   /*Typografi */
   --font-header: "Inter-ExtraBoldItalic";
   --font-subheader: "Inter-BlackItalic";
   --font-button: "Inter-Regular";
   --font-body: "Inter-Regular";
-  --font-link: "Inter-BoldItalic"
-
+  --font-link: "Inter-BoldItalic";
   
+  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+  @keyframes heartbeat {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
 }
 
 .h1 {
@@ -52,27 +61,23 @@
   @apply font-subheader uppercase text-[20px] xl:text-[24px];
 }
 .p1 {
-  @apply font-body normal-case text-[20px];
+  @apply font-body normal-case text-[20px] xl:text-[24px];
 }
 .p2 {
   @apply font-body normal-case text-[15px] xl:text-[20px];
 }
 .p3 {
-  @apply font-body normal-case text-[10px];
+  @apply font-body normal-case text-[10px] xl:text-[16px];
 }
 .a1 {
   @apply font-link uppercase text-[15px] xl:text-[20px];
 }
 
-
 @layer base {
-
 }
 
-@layer components{
-
+@layer components {
 }
 
-@layer utilities{
-  
+@layer utilities {
 }

@@ -1,10 +1,11 @@
 ---
 const {linktext="", href="#"} = Astro.props;
+import "../styles/global.css";
 ---
     
-    <div id="ecomanager-link" class="my-[20px] flex flex-row gap-[10px]">
-      <img class="" src="/images/link-arrow.svg" alt="" />
+    <div id="ecomanager-link" class="group my-[20px] flex flex-row gap-[10px]">
+      <img class="md:group-hover:animate-heartbeat md:group-hover:animate-iteration-count-infinite" src="/images/link-arrow.svg" alt="" />
       <a {href}>
-        <p class="a1">{linktext}</p>
+        <p class="a1 text-nowrap">{linktext}</p>
       </a>
     </div>

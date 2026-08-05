@@ -1,12 +1,14 @@
-<div x-data="{ open: false }" class="w-[100%] h-[40px] bg-linear-to-r from-[#931813] to-[#AF0000]">
+<div x-data="{ open: false }" class="w-[100%] h-[40px] lg:h-[75px] bg-linear-to-r from-[#931813] to-[#AF0000]">
   <!-- Navbar Header -->
-  <div class="flex justify-between place-items-center w-[100%] h-[40px] p-4 outline">
-    <div class="flex flex-row px-[20px] gap-2">
+  <div class="flex justify-between place-items-center w-[100%] h-[40px] lg:h-[75px] lg:p-4">
+    <div class="flex flex-row px-[20px] gap-2 lg:gap-10 place-items-center lg:place-items-center">
         <a href="/">
-    <img src="/images/logo.png" alt="" />
+    <img class="block xl:hidden" src="/images/logo.png" alt="" />
+    <img class="hidden xl:block" src="/images/logo-web.png" alt="" />
     </a>
     <a href="/">
-    <img src="/images/ecomanager-logo.png" alt="" />
+    <img class="block xl:hidden" src="/images/ecomanager-logo.png" alt="" />
+    <img class="hidden xl:block" src="/images/ecomanager-logo-web.png" alt="" />
     </a>
     </div>
     
@@ -20,14 +22,14 @@
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6">
-      <a href="/about" class="text-white">Om Ecomanager</a>
-      <a href="#" class="text-white">Statistik og Data</a>
+      <a href="/about" class="a1 text-white hover:drop-shadow-lg hover:drop-shadow-[#DC1D09]">Om Ecomanager</a>
+      <a href="/data" class="a1 text-white hover:drop-shadow-lg hover:drop-shadow-[#DC1D09]">Statistik og Data</a>
     </nav>
   </div>
 
   <!-- Mobile Menu -->
   <div x-show="open" class="md:hidden relative w-[50%] flex flex-col place-self-end px-4 pt-2 pb-4 space-y-2 bg-linear-to-r from-[#931813] to-[#AF0000]">
-      <a href="/about" class="text-white">Om Ecomanager</a>
-      <a href="#" class="text-white">Statistik og Data</a>
+      <a href="/about" class="a1 text-white">Om Ecomanager</a>
+      <a href="/data" class="a1 text-white">Statistik og Data</a>
   </div>
 </div>

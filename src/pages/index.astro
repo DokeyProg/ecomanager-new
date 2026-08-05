@@ -10,16 +10,17 @@ import Link from "../components/Link.astro";
 <Layout>
   <section id="hero" class="my-[20px]">
     <div class="place-self-center mx-[25px]">
-      <img src="/images/hero-ecoman.png" alt="hero-title" />
+      <img class="block lg:hidden" src="/images/hero-ecoman.png" alt="hero-title" />
+      <img class="hidden lg:block" src="/images/hero-ecoman-web.png" alt="hero-title" />
     </div>
     <div>
-      <img class="w-[100%]" src="/images/hero-video.png" alt="" />
+      <img class="hidden w-[100%]" src="/images/hero-video.png" alt="" />
     </div>
   </section>
   <section class="mx-[25px] md:hidden">
     <Link linktext="Læs Om vores produkter" href="#product-list"/>
   </section>
-  <section id="section" class="my-[20px] mx-[25px] xl:w-[1024px] xl:place-self-center flex flex-col gap-2 md:flex-row xl:place-items-center xl:justify-between">
+  <section id="section" class="my-[20px] mx-[25px] lg:w-[1024px] lg:place-self-center flex flex-col lg:gap-25 gap-2 md:flex-row lg:place-items-center lg:justify-between">
     <div id="kort-om" class="flex flex-col gap-[10px] lg:w-[702px]">
       <p class="s1">Kort om EcoManager</p>
       <p class="p2">
@@ -32,14 +33,14 @@ import Link from "../components/Link.astro";
         <Link linktext="Læs mere om ecomanager" href="/about"></Link>
     </div>
   </section>
-  <section id="img-section">
-    <img class="w-[100%] xl:w-[1024px] xl:flex xl:place-self-center" src="https://placehold.co/448x299" alt="" />
+  <section id="img-section" class="lg:py-10">
+    <img class="w-[100%] lg:w-[1024px] lg:flex lg:place-self-center" src="/images/hero-video.png" alt="" />
   </section>
-  <section id="product-list" class="my-[20px] mx-[25px] flex flex-col gap-[25px] xl:w-[1024px] xl:place-self-center">
-    <div>
+  <section id="product-list" class="my-[20px] mx-[25px] flex flex-col lg:w-[1024px] place-self-center">
+    <div class="">
       <p class="s1">Produkter der kan styres med EcoManager</p>
     </div>
-    <div id="product" class="flex flex-wrap gap-5 place-content-center xl:justify-between">
+    <div id="product" class="flex flex-wrap gap-5 place-content-center lg:justify-between">
       <ProductCard />
     </div>
   </section>

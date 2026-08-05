@@ -11,15 +11,13 @@ const data: any[] = await fetch(url, options).then((res) => res.json());
 {
     data.map((product) => (
         <article class="my-5">
-            <a class="group relative flex flex-col place-items-center" href={"/products/" + product.slug}>
-            <div class=" flex flex-col content-center w-[90px] h-[90px] gap-[10px] xl:w-[160px] xl:h-[160px]">
-            <img class="" src="/images/green-circle-bg.svg " alt="">
-            <img class="self-center absolute w-[90px] xl:w-[160px] flex flex-col align-self-center" src={product.image} alt="img">
+            <a class="group relative flex flex-col place-items-center w-[90px] lg:w-[160px]" href={"/products/" + product.slug}>
+            <div class=" flex flex-col content-center w-[90px] h-[90px] gap-[10px] lg:w-[160px] lg:h-[160px]">
+            <img class="md:group-hover:animate-heartbeat md:group-hover:drop-shadow-[#B9F556] md:group-hover:drop-shadow-lg rounded-[360px]" src="/images/green-circle-bg.svg " alt="">
+            <img class="self-center absolute w-[90px] lg:w-[160px] flex flex-col align-self-center" src={product.image} alt="img">
             </div>
-            <div class="absolute -z-1 flex flex-col items-center w-[90px] h-[90px] xl:w-[160px] xl:h-[160px] gap-[10px] group-hover:bg-[#95C93F] rounded-[360px] blur-[0px] md:group-hover:animate-heartbeat md:group-hover:animate-duration-2000 md:group-hover:animate-iteration-count-infinite md:group-hover:animate-ease-linear">
-            </div>
-            <div>
-            <p class="text-sm">{product.name}</p>
+            <div class="py-[20px]">
+            <p class="p2 wrap-break-word">{product.name}</p>
             </div>
             </a>
         </article>
