@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 const { product } = Astro.props;
 ---
 
-<Layout>
+<Layout title={product.name}>
   <article class="lg:flex lg:flex-col flex flex-col gap-[40px] lg:gap-[100px]">
     <div class="mx-[25px] my-[20px] lg:w-[1024px] lg:place-self-center">
       <p class="h1">{product.name}</p>
