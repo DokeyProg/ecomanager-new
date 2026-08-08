@@ -2,9 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import ProductCard from "../components/ProductCard.astro";
 import Link from "../components/Link.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Forside">
@@ -18,19 +15,24 @@ import Link from "../components/Link.astro";
     </div>
   </section>
   <section class="mx-[25px] md:hidden">
-    <Link linktext="Læs Om vores produkter" href="#product-list"/>
+    <Link linktext="Læs Om vores produkter" href="#product-list" />
   </section>
-  <section id="section" class="my-[20px] mx-[25px] lg:w-[1024px] lg:place-self-center flex flex-col lg:gap-25 gap-2 md:flex-row lg:place-items-center lg:justify-between">
+  <section
+    id="section"
+    class="my-[20px] mx-[25px] lg:w-[1024px] lg:place-self-center flex flex-col lg:gap-25 gap-2 md:flex-row lg:place-items-center lg:justify-between"
+  >
     <div id="kort-om" class="flex flex-col gap-[10px] lg:w-[702px]">
       <p class="s1">Kort om EcoManager</p>
       <p class="p2">
-        ECOmanager er Zeppelin Rentals intelligente løsning til styring og optimering af byggepladsens energiforbrug. Systemet bruger AI til at analysere data og reducere CO₂‑udledning, samtidig med
-        at det måler og styrer indeklima, varme, vand og tilsluttede enheder som ladestandere. Du får fuldt overblik via en online portal og nem adgang til forbrugsdata til rapportering. Installation
-        er enkel, og systemet kræver ingen daglig indsats. Resultatet er lavere forbrug, økonomiske besparelser og en grønnere virksomhedsprofil.
+        ECOmanager er Zeppelin Rentals intelligente løsning til styring og optimering af byggepladsens energiforbrug.
+        Systemet bruger AI til at analysere data og reducere CO₂‑udledning, samtidig med at det måler og styrer
+        indeklima, varme, vand og tilsluttede enheder som ladestandere. Du får fuldt overblik via en online portal og
+        nem adgang til forbrugsdata til rapportering. Installation er enkel, og systemet kræver ingen daglig indsats.
+        Resultatet er lavere forbrug, økonomiske besparelser og en grønnere virksomhedsprofil.
       </p>
     </div>
     <div class="place-content-center">
-        <Link linktext="Læs mere om ecomanager" href="/about"></Link>
+      <Link linktext="Læs mere om ecomanager" href="/about" />
     </div>
   </section>
   <section id="img-section" class="lg:py-10">
